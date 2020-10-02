@@ -128,7 +128,9 @@ class App extends React.Component {
     this.updateTable();
   }
   async updateTable() {
-    let response = await fetch('https://blaze-api-app.herokuapp.com/api/customers');
+    let response = await fetch(
+      'https://blaze-api-app.herokuapp.com/api/customers'
+    );
     let data = await response.json();
     this.setState({
       customerData: data,
