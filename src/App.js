@@ -61,7 +61,6 @@ class App extends React.Component {
         <div className="table-container">
           <div className="ag-theme-balham">
             <AgGridReact
-              enableSorting={true}
               pagination={true}
               paginationAutoPageSize={true}
               columnDefs={this.state.columnDefs}
