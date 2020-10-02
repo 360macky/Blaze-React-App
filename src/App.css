@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+:root {
+  --color-primary: #0ec6e8;
+  --color-light: #69f9ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: var(--color-primary);
+  font-family: 'Secular One', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-container {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-container input {
+  padding: 5px;
+  border: 0;
+  outline: none;
+}
+
+.search-container input {
+  border: 3px solid #f0f0f0;
+  transition-property: border;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  width: 300px;
+}
+
+.search-container input:focus {
+  border: 3px solid var(--color-primary);
+}
+
+.search-container input:nth-child(1) {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.search-container input:nth-child(3) {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+  flex-direction: row;
+}
+
+.ag-theme-balham {
+  box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.1);
+  border: 2px solid #f0f0f0;
+  transition-property: border;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  display: block;
+  height: 400px;
+  width: 90%;
+  font-size: 1rem !important;
+  margin: 0;
+}
+
+.ag-theme-balham:hover {
+  border: 2px solid var(--color-primary);
+}
+
+.option-section {
+  display: flex;
+  justify-content: center;
+}
+
+.customer-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 40px;
+  padding: 30px;
+  background-color: white;
+  width: 70%;
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.customer-form * {
+  font-size: 1.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.customer-form label {
+  margin-top: 20px;
+}
+
+.customer-form input[type='text'],
+.customer-form input[type='number'],
+.customer-form input[type='email'] {
+  border: 2px solid #f0f0f0;
+  padding: 6px;
+  outline: none;
+}
+
+.customer-form input[type='text']:focus,
+.customer-form input[type='number']:focus,
+.customer-form input[type='email']:focus {
+  border: 2px solid var(--color-primary);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons input[type='button'] {
+  margin-top: 20px;
+  padding: 15px;
 }
