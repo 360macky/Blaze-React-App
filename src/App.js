@@ -129,7 +129,7 @@ class App extends React.Component {
     this.updateTable();
   }
   async updateTable() {
-    let response = await fetch('http://localhost:3000/api/customers');
+    let response = await fetch('https://blaze-api-app.herokuapp.com/api/customers');
     let data = await response.json();
     this.setState({
       customerData: data,
@@ -145,7 +145,7 @@ class App extends React.Component {
     };
 
     await fetch(
-      `http://localhost:3000/api/add/customer?${new URLSearchParams(
+      `https://blaze-api-app.herokuapp.com/api/add/customer?${new URLSearchParams(
         newCustomer
       )}`
     );
@@ -161,7 +161,7 @@ class App extends React.Component {
       phoneNumber: this.state.phoneNumber,
     };
     await fetch(
-      `http://localhost:3000/api/update/customer?${new URLSearchParams(
+      `https://blaze-api-app.herokuapp.com/api/update/customer?${new URLSearchParams(
         newCustomerData
       )}`
     );
